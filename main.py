@@ -2,9 +2,9 @@ import pandas as pd
 from twilio.rest import Client
 
 # Your Account SID from twilio.com/console
-account_sid = "ACa4b57685e852917e2dde0a4262bdb448"
+account_sid = "acount Sid twilio"
 # Your Auth Token from twilio.com/console
-auth_token = "d12755bb287627963cc109879106a518"
+auth_token = "token twilio"
 #conexão com o servidor twilio
 client = Client(account_sid, auth_token)
 
@@ -29,7 +29,7 @@ for mes in lista_meses:
         print(f'No mes de {mes} a meta foi batida, vendedor {vendedor} vendeu {vendas}')
 #metodo twilio envio de SMS
         message = client.messages.create(
-            to="+5511941203938",
+            to="+numero de celular",
             from_="++14256003421",
             body=f'No mes de {mes} a meta foi batida, vendedor {vendedor} vendeu {vendas}')
         print(message.sid)
